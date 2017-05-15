@@ -3,9 +3,11 @@ Primera versión de la arquitectura del sitio web usando Node JS
 
 Para ejecutar esta aplicación deben realizar los siguientes pasos:
 
-1.- Instalar Node JS
+1.- Instalar Node JS.
+
 2.- Usando la consola de comandos , navegar hasta el directorio de la app y ejecutar el comando "node app.js". Esto levantará un servidor
 local el cual usa el puerto 3000 para publicar el sitio web. 
+
 3.- Abrir navegador y escribir "http://localhost:3000/"
 
 Directorio:
