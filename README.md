@@ -16,6 +16,7 @@ business : Contiene la logica de negocio.
 
 entities : Contiene las entidades del modelo de datos. Usamos Sequelize (modulo de Node js que funciona como ORM) 
                  para mapear los objetos de BD. 
+                 
 controller : Contiene los controladores que se comunican con la capa de negocios para obtener datos y pasarlos a la vista.
 
 node_modules: Modulos JS
