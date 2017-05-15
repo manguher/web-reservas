@@ -1,0 +1,50 @@
+<p>Welcome to the homepage of {{ title }}...</p>
+
+<form id="formCliente" method="post">
+	<input type="text" id="txtRut">
+	<input type="text" id="txtGiro">
+	<input type="text" id="txtRazonSocial">
+	<input type="button" id="btnCrearCliente" value="Guardar">
+</form>	
+
+<input type="text" id="idUsuario">
+<input type="button" id="btnGetCliente" value="Get Cliente">
+<div id="divJsonCliente"></div>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		$('#btnCrearCliente').click(function(){
+
+			var data = {};
+			data.rut = $('#txtRut').val();
+			data.giro = $('#txtGiro').val();
+			data.razon_social = $('#txtRazonSocial').val();
+
+			$.ajax({
+				type: 'POST',
+				url: '/cliente/create',
+				data: {data},
+				dataType:'json',
+				success: function (data){
+					console.log(data);
+				}
+			});
+		});
+
+		$('#btnGetCliente').click(function(){
+			var clienteId = $('#idUsuario').val();
+			$.ajax({
+				type: 'GET',
+				url: '/cliente/'+clienteId ,
+				data: {},
+				dataType:'json',
+				success: function (data){
+					var _cliente = JSON.stringify(data);
+					$('#divJsonCliente').append(_cliente);
+					console.log(data)
+				}
+			});
+		});
+	});
+</script>
