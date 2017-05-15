@@ -11,7 +11,8 @@ local el cual usa el puerto 3000 para publicar el sitio web.
 Directorio:
 
 business : Contiene la logica de negocio. 
-  |___entities : Contiene las entidades del modelo de datos. Usamos Sequelize (modulo de Node js que funciona como ORM) 
+
+entities : Contiene las entidades del modelo de datos. Usamos Sequelize (modulo de Node js que funciona como ORM) 
                  para mapear los objetos de BD. 
 controller : Contiene los controladores que se comunican con la capa de negocios para obtener datos y pasarlos a la vista.
 
@@ -20,8 +21,9 @@ node_modules: Modulos JS
 public: css-js-images
 
 views: Contiene las vistas de la app. 
-  |___ layout : Contiene el layout o master page de la app. Como primera instancia usamos "handelbars" ( modulo de node js ) como 
-                motor de vistas.
+
+layout : Contiene el layout o master page de la app. Como primera instancia usamos "handelbars" ( modulo de node js ) como 
+         motor de vistas.
 
 
 
